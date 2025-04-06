@@ -33,8 +33,8 @@ app.use(shopRoutes);
 app.use(errorController.get404);
 
 mongoose.connect('mongodb://admin:admin1234@ac-xeqrfuv-shard-00-00.0lljc5f.mongodb.net:27017,ac-xeqrfuv-shard-00-01.0lljc5f.mongodb.net:27017,ac-xeqrfuv-shard-00-02.0lljc5f.mongodb.net:27017/?ssl=true&retryWrites=true&w=majority&appName=Cluster0&authSource=admin&replicaSet=atlas-sxwo5o-shard-0', {
-  useNewUrlParser: true,   // Add this option
-  useUnifiedTopology: true // Recommended, explained below
+  useNewUrlParser: true,  
+  useUnifiedTopology: true 
 })
   .then(result => {
     User.findOne().then(user => {
